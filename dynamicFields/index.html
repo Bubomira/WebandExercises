@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Fields exercise</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="dynamicFields.js"></script>
+</head>
+<body>
+
+    <div class="wrapper">
+        <form class="site-form">
+            <section class="form-group">
+               <label for="name">Име</label>
+               <input id="name" name="name" type="text">
+            </section>
+    
+            <section class="form-group">
+                <label for="type">Тип на документа</label>
+                <select  id="type" name="type" >
+                    <option value="0">Фактура</option>
+                    <option value="1">Съобщение</option>
+                    <option value="2">Заявка</option>
+                </select>
+             </section>
+    
+             <section class="form-group form-group-select">
+    
+                 <section class="factura-group">
+        
+                    <section class="form-group">
+                        <label for="price">Цена</label>
+                        <input id="price" name="price" type="text">
+                     </section>
+                     <section class="form-group">
+                        <label for="firm">Име на фирмата</label>
+                        <input id="firm" name="firm" type="text">
+                     </section>
+                     <section class="form-group">
+                        <label for="dds">ДДС Процент</label>
+                        <input id="dds" name="dds" type="text">
+                     </section>
+        
+                 </section>
+        
+                 <section class="message-group">
+    
+                     <section class="form-group">
+                        <label for="receiver">За</label>
+                        <input id="receiver" name="receiver" type="text">
+                     </section>
+    
+                     <section class="form-group">
+                        <label for="message">Съобщение</label>
+                        <input id="message" name="message" type="text">
+                     </section>
+    
+                </section>         
+                <section class="query-group">
+    
+                    <section class="form-group">
+                        <label for="town">Град</label>
+                        <input id="town" name="town" type="text">
+                     </section>
+    
+                     <section class="form-group">
+                        <label for="street">Улица</label>
+                        <input id="street" name="street" type="text">
+                     </section>
+    
+                     <section class="form-group">
+                        <label for="number">Номер</label>
+                        <input id="number" name="number" type="text">
+                     </section>
+                </section>
+             </section>
+    
+    
+    
+        </form>
+
+    </div>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+*{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1em;
+    color: #333131
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+
+.site-form label{
+    color:rgb(61, 61, 70);
+}
+
+.site-form{
+    background-color: rgb(225, 224, 255);
+    width: 20%;
+    padding: 2em;
+}
+
+.site-form, .form-group-select .factura-group, .message-group, .query-group{
+   display: flex;
+   flex-direction: column;
+   gap: 1em;
+}
+
+.form-group{ 
+    display: flex;
+    gap: 0.1em;
+    flex-direction: column;
+}
+
+.message-group, .query-group{
+    display: none;
+}
+
+
+.form-group input, .form-group select{
+    padding: 0.2em 0.5em;
+    border-radius: 0.4em;
+    border: 1px rgb(148, 148, 170) solid;
+}
