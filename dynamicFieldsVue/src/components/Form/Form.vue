@@ -1,6 +1,6 @@
 <script setup>
 
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import FormGroup from './FormGroup.vue';
 import InvoiceFields from './Fields/InvoiceFields.vue';
 import MessageFields from './Fields/MessageFields.vue';
@@ -8,6 +8,15 @@ import QueryFields from './Fields/QueryFields.vue';
 
 const type = defineModel()
 
+const showInvoice=computed(()=>{
+  return type.value=='invoice'
+})
+const showMessage=computed(()=>{
+  return type.value=='message'
+})
+const showQuery=computed(()=>{
+  return type.value=='query'
+})
 
 </script>
 
@@ -22,9 +31,9 @@ const type = defineModel()
             <option value="query">Заявка</option>
         </select>
     </section>
-    <InvoiceFields v-if="type=='invoice'"/>
-    <MessageFields v-if="type=='message'"/>
-    <QueryFields v-if="type=='query'"/>
+    <InvoiceFields v-if="showInvoice"/>
+    <MessageFields v-if="showMessage"/>
+    <QueryFields v-if="showQuery"/>
 
   </form>
 
