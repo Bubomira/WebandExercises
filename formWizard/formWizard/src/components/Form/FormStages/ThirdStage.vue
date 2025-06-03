@@ -13,11 +13,6 @@ const keys = computed(()=>{
    return Object.keys(store.$state).filter(x=>x!='knowledge')
 })
 
-console.log(Object.keys(store.$state).filter((x)=>{
-    console.log(x)
-}))
-
-
 const price = computed(()=>{
      let price= store.$state.cardNumber* CARD_PRICE;
      if(store.$state.delivery=='address'){
