@@ -25,6 +25,11 @@ const price = computed(()=>{
      return price;
 })
 
+const showDeliveryShop = computed(()=>store.$state.delivery=='shop')
+const showDeliveryAdress = computed(()=>store.$state.delivery=='address')
+const showDeliveryEkont = computed(()=>store.$state.delivery=='ekont')
+const showOther = computed(()=>store.$state.method=='other')
+
 </script>
 
 
@@ -34,11 +39,11 @@ const price = computed(()=>{
     <h3>Всички данни, които сте попълнили: </h3>
     <InputGroup v-for="key in keys" :name="key" :label="key" :disabled="true"/>
 
-    <textarea v-if="store.$state.method=='other'" disabled> {{ store.$state.knowledge }} </textarea>
+    <textarea v-if="showOther" disabled> {{ store.$state.knowledge }} </textarea>
 
-     <p v-if="store.$state.delivery=='shop'">{{DELIVERY_MESSAGE}}.</p>
-    <p v-if="store.$state.delivery=='address'">Цена за доставка: {{ ADDRESS_PRICE }} лв.</p>
-    <p v-else-if="store.$state.delivery=='ekont'">Цена за доставка до еконт: {{ EKONT_PRICE }} лв.</p>
+     <p v-if="showDeliveryShop">{{DELIVERY_MESSAGE}}.</p>
+    <p v-if="showDeliveryAdress">Цена за доставка: {{ ADDRESS_PRICE }} лв.</p>
+    <p v-else-if="showDeliveryEkont">Цена за доставка до еконт: {{ EKONT_PRICE }} лв.</p>
 
 
     <h4>Общата цена е: {{ price }} лева</h4>

@@ -8,10 +8,9 @@ import { labels,DELIVERY_MESSAGE } from '@/constants';
 
 const store =useFormStore()
 
-const showAdress = computed(()=>{
-    return store.$state.delivery=='address' || store.$state.delivery=='ekont'
-})
+const showAdress = computed(()=> store.$state.delivery=='address' || store.$state.delivery=='ekont')
 
+const showOther = computed(()=> store.$state.method=='other')
 
 </script>
 
@@ -31,7 +30,7 @@ const showAdress = computed(()=>{
               <option value="other">Друго</option>
         </select>
     </section>
-    <section v-if="store.$state.method=='other'" class="form-group">
+    <section v-if="showOther" class="form-group">
         <label for="knowledge">Моля, посочете как: </label>
         <textarea v-model="store.$state.knowledge" id="knowledge" placeholder="..."></textarea>
     </section>

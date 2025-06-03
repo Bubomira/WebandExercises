@@ -11,6 +11,12 @@ const stage = ref(1);
 
 const store =useFormStore()
 
+const restrictBackwards = computed(()=>stage.value==1)
+
+const restrictForward = computed(()=>
+    (stage.value==3) || 
+    (stage.value==1 && store.$state.delivery=='')|| 
+    (stage.value==2 && store.$state.method==''))
 
 </script>
 
@@ -23,8 +29,8 @@ const store =useFormStore()
         <ThirdStage v-if="stage==3"/>
     </form>
     <div class="btn-wrapper">
-        <button @click="stage--" :disabled="stage==1">Назад</button>
-        <button @click="stage++" :disabled="(stage==3) || (stage==1 && store.$state.delivery=='') || (stage==2 && store.$state.method=='')">Напред</button>
+        <button @click="stage--" :disabled="restrictBackwards" >Назад</button>
+        <button @click="stage++" :disabled="restrictForward">Напред</button>
     </div>
     
 </template>
