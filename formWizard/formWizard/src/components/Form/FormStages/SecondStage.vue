@@ -4,7 +4,7 @@ import { computed } from 'vue';
 import InputGroup from '../FormFields/InputGroup.vue';
 
 import { useFormStore } from '@/formStore';
-import { labels,deliveryMessage } from '@/constants';
+import { labels,DELIVERY_MESSAGE } from '@/constants';
 
 const store =useFormStore()
 
@@ -19,7 +19,7 @@ const showAdress = computed(()=>{
 <template>
 
     <InputGroup v-if="showAdress" name="address"  />
-    <p v-else>{{ deliveryMessage }}</p>
+    <p v-else>{{ DELIVERY_MESSAGE }}</p>
     <InputGroup name="telephone" />
     
     <section class="form-group">

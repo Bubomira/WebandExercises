@@ -2,7 +2,7 @@
 
 import { computed } from 'vue';
 
-import { CARD_PRICE,EKONT_PRICE,ADDRESS_PRICE } from '@/constants';
+import { CARD_PRICE,EKONT_PRICE,ADDRESS_PRICE,DELIVERY_MESSAGE } from '@/constants';
 
 import InputGroup from '../FormFields/InputGroup.vue';
 import { useFormStore } from '@/formStore';
@@ -36,6 +36,7 @@ const price = computed(()=>{
 
     <textarea v-if="store.$state.method=='other'" disabled> {{ store.$state.knowledge }} </textarea>
 
+     <p v-if="store.$state.delivery=='shop'">{{DELIVERY_MESSAGE}}.</p>
     <p v-if="store.$state.delivery=='address'">Цена за доставка: {{ ADDRESS_PRICE }} лв.</p>
     <p v-else-if="store.$state.delivery=='ekont'">Цена за доставка до еконт: {{ EKONT_PRICE }} лв.</p>
 

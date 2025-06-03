@@ -17,5 +17,5 @@ export const labels={
     knowledge:'Посочете как'
 }
 
-export const deliveryMessage= 
+export const DELIVERY_MESSAGE= 
 'Можете да получите своята карта срещу предоставяне на ваучер в София в Магазин “Балканско” пл. „Княз Александър I“ 1, или Магазин “Балканско” бул. „Витоша“ 4'
