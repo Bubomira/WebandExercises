@@ -6,8 +6,8 @@ const {name,label} = defineProps(['name','label'])
 
 <template>
      <section class="form-group">
-               <label for="{{name}}">{{label}}</label>
-               <input id="{{name}}" name="{{name}}" type="text">
+               <label :for="name">{{label}}</label>
+               <input :id="name" :name="name" type="text"/>
     </section>
 </template>
 
