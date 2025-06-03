@@ -6,17 +6,8 @@ import InvoiceFields from './Fields/InvoiceFields.vue';
 import MessageFields from './Fields/MessageFields.vue';
 import QueryFields from './Fields/QueryFields.vue';
 
-const fields = ref([true,false,false])
+const type = defineModel()
 
-function change(event){
-    for(let i=0;i<fields.value.length;i++){
-      if(event.target.value==i){
-         fields.value[i] = true;
-      }else{
-        fields.value[i]=false;
-      }
-    }
-}
 
 </script>
 
@@ -25,15 +16,15 @@ function change(event){
     <FormGroup name="name" label="Име"/>
     <section class="form-group">
         <label for="type">Тип на документа</label>
-        <select @change="change"  id="type" name="type" >
-            <option value="0">Фактура</option>
-            <option value="1">Съобщение</option>
-            <option value="2">Заявка</option>
+        <select v-model="type" id="type" name="type" >
+            <option value="invoice">Фактура</option>
+            <option value="message">Съобщение</option>
+            <option value="query">Заявка</option>
         </select>
     </section>
-    <InvoiceFields v-if="fields[0]"/>
-    <MessageFields v-if="fields[1]"/>
-    <QueryFields v-if="fields[2]"/>
+    <InvoiceFields v-if="type=='invoice'"/>
+    <MessageFields v-if="type=='message'"/>
+    <QueryFields v-if="type=='query'"/>
 
   </form>
 
