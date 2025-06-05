@@ -28,8 +28,7 @@
               <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
               <x-nav-link href="/jobs" :active="request()->is('jobs')">Jobs</x-nav-link>
               <x-nav-link href="/contacts" :active="request()->is('contacts')">Contacts</x-nav-link>
-              <x-nav-link :active="request()->is('message')" type="button">Message</x-nav-link>
-
+              <!-- <x-nav-link :active="request()->is('message')" type="button">Message</x-nav-link> -->
             </div>
           </div>
         </div>
@@ -99,8 +98,9 @@
   </nav>
 
   <header class="bg-white shadow-sm">
-    <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <h1>{{ $heading }}</h1>
+    <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 sm:flex sm:justify-between">
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{ $heading }}</h1>
+        <x-button href="/jobs/create">Create Job</x-button>
     </div>
   </header>
 
