@@ -9,14 +9,26 @@ Route::get('/', function () {
 });
 
 Route::get('/jobs',function() {
+
+    //normal pagination
+    //$jobs = Job::with('employer')->paginate(3);
+
+    //simple-pagination
+    //$jobs = Job::with('employer')->cursorPaginate(3);
+
+    //simple-pagination
+    $jobs = Job::with('employer')->simplePaginate(3);
+
     return view('jobs',[
-        'jobs'=>Job::all()
+        'jobs'=>$jobs
     ]);
 });
 
 Route::get('/jobs/{id}',function($id) {
 
    $job= Job::find($id);
+
+   if(!$job) { abort(404);}
 
     return view('job',['job'=>$job]);
 });
