@@ -15,7 +15,10 @@
     <body class="bg-blue-100">
         <div>
             <nav class="text-white font-bold flex bg-sky-800 justify-between px-6 py-4">
-                <a href="/courses">Courses</a>
+                <div class="space-x-6">
+                    <a href="/courses">Courses</a>
+                    <a href="/search">Search</a>
+                </div>
                 <div class="flex space-x-7">
                      @guest
                          <a href="/login">Login</a>

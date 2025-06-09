@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\LectureController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
@@ -28,3 +29,6 @@ Route::post('/lectures',[LectureController::class,'store']);
 Route::get('/courses/show/{course}',[CourseController::class,'show']);
 
 Route::get('/lectures/{lecture}',[LectureController::class,'index']);
+
+Route::get('/search',[SearchController::class,'index']);
+Route::post('/search',[SearchController::class,'show']);
