@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Auth;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Rules\Password;
 use Illuminate\Validation\ValidationException;
 
 class LoginController extends Controller

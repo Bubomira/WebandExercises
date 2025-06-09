@@ -12,7 +12,7 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
     </head>
-    <body class="bg-sky-200 w-full m-auto">
+    <body class="bg-blue-100 w-full m-auto">
         <div>
             <nav class="text-white font-bold flex bg-sky-800 justify-between px-6 py-4">
                 <a href="/courses">Courses</a>
