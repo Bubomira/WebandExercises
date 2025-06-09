@@ -10,6 +10,8 @@ class Lecture extends Model
     /** @use HasFactory<\Database\Factories\LectureFactory> */
     use HasFactory;
 
+    protected $guarded=[];
+
     public function course(){
         return $this->belongsTo(Course::class);
     }

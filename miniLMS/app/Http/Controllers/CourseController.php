@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
+use Illuminate\Container\Attributes\Auth;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -24,17 +25,20 @@ class CourseController extends Controller
         return view('courses.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $courseAttributes = $request->validate( [
+          'title'=> 'required',
+          'description'=> 'required',
+        ]);
+
+        $courseAttributes['user_id']= \Auth::getUser()->id;
+
+        $course = Course::create($courseAttributes);
+
+        return redirect('/courses/show'.'/'. $course->id);
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(Course $course)
     {
         return view('courses.show',[

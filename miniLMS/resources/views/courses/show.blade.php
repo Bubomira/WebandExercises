@@ -17,11 +17,14 @@
     </div>
     
     @can('delete',$course) 
-       <form action="/courses/{{ $course->id }}" method="POST">
-         @csrf
-         @method('DELETE')
-         <input class="bg-red-900 rounded-md py-3 px-6 text-white" type="submit" value="Delete">
-       </form>  
+    <div class="flex space-x-3 justify-center">
+      <form action="/courses/{{ $course->id }}" method="POST">
+        @csrf
+        @method('DELETE')
+        <input class="bg-red-900 rounded-md py-3 px-6 text-white" type="submit" value="Delete">
+      </form>  
+      <a href="/courses/{{ $course->id }}/add/lecture" class="px-5 py-3 bg-sky-700 text-white/90 rounded-lg self-center">Add Lecture</a>
+    </div>
     @endcan 
 
   </section>
