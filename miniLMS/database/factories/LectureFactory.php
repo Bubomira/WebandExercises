@@ -18,7 +18,7 @@ class LectureFactory extends Factory
     public function definition(): array
     {
         return [
-            'title'=>fake()->word(),
+            'title'=>fake()->title(),
             'description'=>fake()->paragraph(),
             'url'=>'https://www.youtube.com/embed/rIfdg_Ot-LI?si=zOmTJAAYdjDyiil7',
             'order'=>fake()->randomDigitNotZero(),
