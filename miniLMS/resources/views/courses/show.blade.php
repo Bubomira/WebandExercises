@@ -18,12 +18,12 @@
     
     @can('delete',$course) 
     <div class="flex space-x-3 justify-center">
-      <form action="/courses/{{ $course->id }}" method="POST">
+      <form action="{{route('courses.show', $course)}} " method="POST">
         @csrf
         @method('DELETE')
         <input class="bg-red-900 rounded-md py-3 px-6 text-white" type="submit" value="Delete">
       </form>  
-      <a href="/courses/{{ $course->id }}/add/lecture" class="px-5 py-3 bg-sky-700 text-white/90 rounded-lg self-center">Add Lecture</a>
+      <a href="{{route('lectures.add', $course)}}" class="px-5 py-3 bg-sky-700 text-white/90 rounded-lg self-center">Add Lecture</a>
     </div>
     @endcan 
 

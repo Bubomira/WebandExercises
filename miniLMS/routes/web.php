@@ -18,17 +18,20 @@ Route::delete('/logout',[LoginController::class,'destroy'])->middleware('auth');
 
 Route::get('/courses',[CourseController::class,'index']);
 
-Route::delete('/courses/{course}',[CourseController::class,'destroy'])->can('delete','course');
+Route::delete('/courses/{course}',[CourseController::class,'destroy'])
+       ->can('delete','course')
+       ->name('courses.destroy');
+
 Route::get('/courses/create',[CourseController::class,'create'])->middleware('auth');
 Route::post('/courses',[CourseController::class,'store'])->middleware('auth');
 
 
-Route::get('/courses/{course}/add/lecture',[LectureController::class,'create']);
+Route::get('/courses/{course}/add/lecture',[LectureController::class,'create'])->name('lectures.add');
 Route::post('/lectures',[LectureController::class,'store']);
 
-Route::get('/courses/show/{course}',[CourseController::class,'show']);
+Route::get('/courses/{course}',[CourseController::class,'show'])->name('courses.show');
 
-Route::get('/lectures/{lecture}',[LectureController::class,'index']);
+Route::get('/lectures/{lecture}',[LectureController::class,'index'])->name('lectures.show');
 
 Route::get('/search',[SearchController::class,'index']);
 Route::post('/search',[SearchController::class,'show']);

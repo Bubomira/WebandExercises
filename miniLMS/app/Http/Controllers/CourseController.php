@@ -36,7 +36,7 @@ class CourseController extends Controller
 
         $course = Course::create($courseAttributes);
 
-        return redirect('/courses/show'.'/'. $course->id);
+        return redirect('/courses'.'/'. $course->slug);
     }
 
     public function show(Course $course)
