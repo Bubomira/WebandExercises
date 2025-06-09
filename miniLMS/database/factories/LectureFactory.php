@@ -20,7 +20,7 @@ class LectureFactory extends Factory
         return [
             'title'=>fake()->word(),
             'description'=>fake()->paragraph(),
-            'url'=>fake()->url(),
+            'url'=>'https://www.youtube.com/embed/rIfdg_Ot-LI?si=zOmTJAAYdjDyiil7',
             'order'=>fake()->randomDigitNotZero(),
         ];
     }
