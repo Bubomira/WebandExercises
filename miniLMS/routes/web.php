@@ -26,12 +26,18 @@ Route::get('/courses/create',[CourseController::class,'create'])->middleware('au
 Route::post('/courses',[CourseController::class,'store'])->middleware('auth');
 
 
-Route::get('/courses/{course}/add/lecture',[LectureController::class,'create'])->name('lectures.add');
-Route::post('/lectures',[LectureController::class,'store']);
+Route::get('/courses/{course}/add/lecture',[LectureController::class,'create'])->name('lectures.add')
+       ->can('delete','course');
+
+Route::post('/courses/{course}/add/lecture',[LectureController::class,'store'])
+       ->can('delete','course')
+       ->name('lectures.store');
+
+Route::get('/lectures/{lecture}',[LectureController::class,'index'])->name('lectures.show');
 
 Route::get('/courses/{course}',[CourseController::class,'show'])->name('courses.show');
 
-Route::get('/lectures/{lecture}',[LectureController::class,'index'])->name('lectures.show');
+
 
 Route::get('/search',[SearchController::class,'index']);
 Route::post('/search',[SearchController::class,'show']);

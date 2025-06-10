@@ -20,8 +20,8 @@ class LectureController extends Controller
            ]);
     }
 
-    public function store(Request $request){
-        
+    public function store(Request $request,Course $course){
+
         $lectureAttributes = $request->validate( [
           'title'=> 'required',
           'description'=> 'required',
@@ -29,10 +29,10 @@ class LectureController extends Controller
            'url'=>['required','url'],
         ]);
 
-        $lectureAttributes['course_id'] = $request->get('course_id');
+        $lectureAttributes['course_id'] = $course->id;
 
         $lecture = Lecture::create($lectureAttributes);
 
-        return redirect('/lectures'.'/'. $lecture->id);
+        return redirect('/lectures'.'/'. $lecture->slug);
     }
 }
