@@ -18,7 +18,7 @@ class CourseFactory extends Factory
     public function definition(): array
     {
         return [
-            'title'=>fake()->word(),
+            'title'=>implode(' ',fake()->words()),
             'description'=>fake()->paragraph(),
             'user_id'=>User::factory()
         ];
