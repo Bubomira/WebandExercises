@@ -1,0 +1,28 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+$custom-colors: (
+  "header": #595D61,
+  "dark-grey": #2A2A2A,
+  "ligth-gray":#595D61,
+  "selected": #00C898,
+  "ligth-mint":#CCF4EA,
+  "flash-news":#00D498,
+  "grey-section":#F9F9F9,
+  "medium-grey":#E3E2E0,
+  "arrow-success":#01D296,
+  "arrow-same":#FFD601,
+  "arrow-danger":#FF4F4F,
+  "dark-green":#00C898
+);
+
+$theme-colors: map-merge($theme-colors , $custom-colors );
+
+.circle {
+      width: 10px;
+      height: 10px; 
+      border-radius: 50%; 
+      background-color: #00D498;
+}
+
+@import "bootstrap/scss/bootstrap";
