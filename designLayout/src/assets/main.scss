@@ -13,7 +13,13 @@ $custom-colors: (
   "arrow-success":#01D296,
   "arrow-same":#FFD601,
   "arrow-danger":#FF4F4F,
-  "dark-green":#00C898
+  "dark-green":#00C898,
+  "table-green":#00D498,
+  "table-header":#818181,
+  "important":#006E4F,
+  "progress-bar":#E3E2E0,
+  "progress-yellow":#FFD600,
+  "progress-green":#006E4F
 );
 
 $theme-colors: map-merge($theme-colors , $custom-colors );
@@ -24,5 +30,14 @@ $theme-colors: map-merge($theme-colors , $custom-colors );
       border-radius: 50%; 
       background-color: #00D498;
 }
+
+.fs-xs{
+   font-size: small;
+}
+
+.border-dashed-rigth{
+ border-right: 2px dashed #E3E2E0;
+}
+
 
 @import "bootstrap/scss/bootstrap";

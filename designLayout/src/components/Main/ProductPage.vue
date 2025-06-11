@@ -1,5 +1,6 @@
 <script setup>
-   import FlashNewsSection from './MainComponents/FlashNewsSection/FlashNewsSection.vue';
+   import CompetitiveSituation from './MainComponents/CompetitiveSituationSection/CompetitiveSituation.vue';
+import FlashNewsSection from './MainComponents/FlashNewsSection/FlashNewsSection.vue';
    import PagePathLinks from './MainComponents/PagePathLinks.vue';
    import SalesStatusSection from './MainComponents/SalesStatusSection/SalesStatusSection.vue'
 import TableHolderContainer from './MainComponents/TablesSection/TableHolderContainer.vue';
@@ -12,6 +13,7 @@ import TableHolderContainer from './MainComponents/TablesSection/TableHolderCont
             <FlashNewsSection/>
             <SalesStatusSection/>
             <TableHolderContainer/>
+            <CompetitiveSituation/>
         </section>
     </main>
 </template>

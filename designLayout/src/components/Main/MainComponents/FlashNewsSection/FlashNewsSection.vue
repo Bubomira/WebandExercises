@@ -6,12 +6,10 @@ import FlashNewsBox from './FlashNewsBox.vue';
 <template>
     <section class="bg-ligth-mint rounded-4 p-3">
          <p class="pb-2 mb-1"><span class="fw-medium">Flash news about:</span> Product:</p>
-         <section class="container">
-            <div class="row gap-2">
+            <div class="d-flex flex-wrap gap-2">
                 <FlashNewsBox/>
                 <FlashNewsBox/>
                 <FlashNewsBox/>
             </div>
-         </section>
     </section>
 </template>
