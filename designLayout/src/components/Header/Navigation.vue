@@ -23,6 +23,9 @@ import NavigationLink from './NavigationLink.vue';
         </section>
     </div>
 </template>
+<!-- <select class="border py-1 px-2 rounded-3 d-flex">
+                <option value=""></option>
+              </select> -->
 
 
 
