@@ -25,14 +25,18 @@ $custom-colors: (
 $theme-colors: map-merge($theme-colors , $custom-colors );
 
 .circle {
-      width: 10px;
-      height: 10px; 
+      width: 5px;
+      height: 5px; 
       border-radius: 50%; 
       background-color: #00D498;
 }
 
 .fs-xs{
    font-size: small;
+}
+
+.fs-xss{
+   font-size: x-small;
 }
 
 .border-dashed-rigth{
