@@ -16,13 +16,13 @@
             <div class="col">
                 <SectionInformationHeading :heading="heading"/>
                 <div class="mt-4 d-flex flex-column justify-content-center align-items-center">
-                    <ProductGraph :isRisk="isRisk"/>                   
+                    <ProductGraph :is-risk="isRisk"/>                   
                 </div>
             </div>
-            <GeneralInfoCard :isRisk="isRisk"/>
+            <GeneralInfoCard :is-risk="isRisk"/>
         </section>
         <section class="row mt-4 bg-white border rounded-2">
-          <ProductTable/>
+          <ProductTable :is-risk="isRisk"/>
         </section>
     </section>
  </section>

@@ -1,6 +1,7 @@
 <script setup>
    import data from '../../../../../../tableData.json'
 
+     const {isRisk} = defineProps(['isRisk'])
 </script>
 
 <template>
@@ -9,8 +10,8 @@
             <tr class="fs-xs text-table-header text-center border-bottom">
                <td class=" py-1 text-start px-2">Combination</td>
                <td class="border-dashed-rigth py-1 text-start px-2"></td>
-               <td >Price play</td>
-               <td>Volume play</td>
+               <td >{{isRisk? 'Disruption':'Price play'}}</td>
+               <td>{{isRisk? 'Erosion':'Volume play'}}</td>
                <td>Total</td>
             </tr>
             <tr v-for="item in data" class="text-center border-bottom">
