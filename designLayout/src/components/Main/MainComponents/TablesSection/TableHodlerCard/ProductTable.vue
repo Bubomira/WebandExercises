@@ -1,5 +1,6 @@
 <script setup>
    import data from '../../../../../../tableData.json'
+
 </script>
 
 <template>

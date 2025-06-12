@@ -20,6 +20,11 @@ $custom-colors: (
   "progress-bar":#E3E2E0,
   "progress-yellow":#FFD600,
   "progress-green":#006E4F,
+  "green-outline":#248E70,
+  "red-outline":#B80D0D,
+  "red-number":#FF4F4F,
+  "green-number":#01D296
+
 );
 
 $theme-colors: map-merge($theme-colors , $custom-colors );

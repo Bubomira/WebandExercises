@@ -16,11 +16,7 @@
             <div class="col">
                 <SectionInformationHeading :heading="heading"/>
                 <div class="mt-4 d-flex flex-column justify-content-center align-items-center">
-                    <ProductGraph :isRisk="isRisk"/>
-                    <div class="d-flex justify-content-between w-50 fs-xss">
-                      <p class="mb-0">0%</p>
-                      <p class="mb-0">100%</p>
-                    </div>
+                    <ProductGraph :isRisk="isRisk"/>                   
                 </div>
             </div>
             <GeneralInfoCard :isRisk="isRisk"/>

@@ -18,7 +18,7 @@ import DropdownGroup from './DropdownGroup.vue';
             <div class="d-flex align-items-center gap-2">
               <button class="fw-light border-0 bg-flash-news rounded-3 text-white px-4 py-2">Price Effect</button>
               <div class="d-flex align-items-center px-1 border rounded-4 gap-1">
-                   <img src="../../../../assets/minimize.svg" alt="Minimize">
+                  <img src="../../../../assets/minimize.svg" alt="Minimize">
                    <p class="mb-0 fs-xss">Minimize</p>
                </div>  
             </div>

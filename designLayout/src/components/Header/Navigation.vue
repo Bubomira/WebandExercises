@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import NavigationLink from './NavigationLink.vue';
-
+import PagePathLinks from './PagePathLinks.vue'
 </script>
 
 <template>
@@ -22,10 +22,9 @@ import NavigationLink from './NavigationLink.vue';
               </div>
         </section>
     </div>
+    <PagePathLinks/> 
 </template>
-<!-- <select class="border py-1 px-2 rounded-3 d-flex">
-                <option value=""></option>
-              </select> -->
+
 
 
 
