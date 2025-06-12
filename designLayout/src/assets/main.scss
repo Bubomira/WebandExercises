@@ -23,8 +23,8 @@ $custom-colors: (
   "green-outline":#248E70,
   "red-outline":#B80D0D,
   "red-number":#FF4F4F,
-  "green-number":#01D296
-
+  "green-number":#01D296,
+  "arrow-black":#2A2A2A
 );
 
 $theme-colors: map-merge($theme-colors , $custom-colors );
@@ -42,6 +42,10 @@ $theme-colors: map-merge($theme-colors , $custom-colors );
 
 .fs-xss{
    font-size: x-small;
+}
+
+.fs-2xs{
+   font-size: 7px;
 }
 
 .border-dashed-rigth{
