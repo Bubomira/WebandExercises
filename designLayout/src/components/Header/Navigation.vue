@@ -9,7 +9,9 @@ import PagePathLinks from './PagePathLinks.vue'
             <div>              
                 <img src="../../assets/logo.svg" alt="Logo">
             </div>
-            <h1 class="text-header fw-bold">SupplyIQ</h1>
+            <h1>
+                <RouterLink class="text-decoration-none text-header fw-bold" to="/">SupplyIQ</RouterLink>        
+            </h1>
         </section>
         <section class="d-flex align-items-center gap-3">
               <ul class="d-flex gap-4 list-unstyled align-items-end mb-0">  

@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-dark-green d-flex justify-content-between px-4 py-2 align-items-center mt-5">
+    <section class="bg-dark-green d-flex justify-content-between px-4 py-2 align-items-center mt-1">
        <div class="d-flex gap-1">
            <p class="mb-0 text-white">Need Help?</p>
             <RouterLink class="text-white border-end border-white pe-3" to="/">Contact Us</RouterLink>
