@@ -14,5 +14,7 @@ onMounted(() => {
    const svg = isRisk? createRedGraph(value): createGreenGraph(value)
    container.value.appendChild(svg)
 })
+
+
 </script>
 

@@ -1,14 +1,14 @@
 import * as d3 from 'd3'
 
-const height =140;
-const width =250;
-const radius = 119;
-const gridSize = 15;
-const cols = Math.floor(width/ gridSize)/2;
-const rows = Math.floor(height/ gridSize)-1;
 
 
 const createGraph=(outline,left,rigth,value)=>{
+  const height =140;
+  const width =250 ;
+  const radius = 119;
+  const gridSize = 15;
+  const rows = Math.floor(height/ gridSize)-1;
+  const cols = Math.floor(width/ gridSize)/2;
   
   let svgEl = d3.create('svg')
   .attr('width', width)
@@ -73,7 +73,7 @@ const createGraph=(outline,left,rigth,value)=>{
     .attr('stop-color', rigth)
 
   svgEl.append('g')
-    .attr('transform', `translate(120, 120)`)
+    .attr('transform', `translate(${width/2}, ${height-20})`)
     .append('path')
     .attr('d', arc)
     .attr('fill', `url(#arc-gradient-${left})`)

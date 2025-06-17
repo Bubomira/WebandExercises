@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import DropdownCalendar from './DropdownCalendar.vue';
 import DropdownGroup from './DropdownGroup.vue';
 
 </script>
@@ -8,8 +7,8 @@ import DropdownGroup from './DropdownGroup.vue';
 
 <template>
         <div class="d-flex mt-3 bg-white border-top justify-content-center py-2 sticky-bottom align-items-center">
-        <div class="d-flex w-75 mx-4 justify-content-between flex-wrap gap-2">
-            <ul class="d-flex flex-wrap gap-2 list-unstyled">
+        <div class="d-flex w-75 mx-4 flex-column align-items-center flex-md-row justify-content-between gap-2">
+            <ul class="d-flex flex-column flex-md-row gap-2 justify-content-center list-unstyled">
 
                 <li class="d-flex gap-2 align-items-center border rounded-3 px-2 border-flash-news">
                    <div><img src="../../../../assets/calendar.svg" alt="Calendar"></div>
@@ -21,7 +20,7 @@ import DropdownGroup from './DropdownGroup.vue';
                <DropdownGroup title="Product" content="Gilette"/>
 
             </ul>
-            <div class="d-flex align-items-center gap-2">
+            <div class="d-flex flex-column flex-sm-row align-items-center gap-2">
               <button class="fw-light border-0 bg-flash-news rounded-3 text-white px-4 py-2">Price Effect</button>
               <div class="d-flex align-items-center px-1 border rounded-4 gap-1">
                   <img src="../../../../assets/minimize.svg" alt="Minimize">

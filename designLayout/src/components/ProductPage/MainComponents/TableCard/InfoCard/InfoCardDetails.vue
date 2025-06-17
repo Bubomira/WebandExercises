@@ -16,7 +16,7 @@ let title= computed(()=>{
 
 <template>
 
-        <div class="d-flex gap-2 border align-items-center fs-6 border-table-green rounded-3 p-2">
+        <div class="d-flex flex-sm-nowrap flex-wrap gap-2 border align-items-center fs-6 border-table-green rounded-3 p-2">
              <p class="mb-0">{{ title }}: <span class="fw-bold">€{{price}}</span></p> 
              <div v-if="!isRisk" class="text-green-number border rounded-2 px-1 bg-grey-section">+4%</div>
              <div v-else class="border rounded-2 text-red-number px-1 bg-grey-section">+4%</div>      

@@ -25,7 +25,7 @@
 </script>
 
 <template>
-    <div class="mt-4 bg-white mx-1 border rounded-2 mt-auto">
+    <div class="mt-4 bg-white mx-1 border rounded-2 mt-auto table-responsive">
     <table class="border-collapse w-100">
         <tbody>
             <tr class="fs-xs text-table-header text-center border-bottom">

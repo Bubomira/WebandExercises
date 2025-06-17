@@ -17,7 +17,5 @@ npm run dev
 10. Replaced all of the symbols with icons from figma
 11. Fixed design where needed
 12. Fixed sticky menu to be sticky instead of fixed
-
-## Working on
-
 13. Responsiveness
+

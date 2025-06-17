@@ -12,7 +12,7 @@ const {heading,parameter,percentage,additional} = defineProps(['heading','parame
         {{ heading }} <span class="text-table-header fw-normal ms-1">{{ additional }}</span>
        </h3>
 
-       <div class="d-flex flex-xs-column align-items-center gap-3 mt-auto">
+       <div class="d-flex flex-column flex-sm-row align-items-sm-start align-items-center gap-3">
            <p class="fw-semibold fs-4 mb-0">{{ parameter }}</p>
            <PercentageCard :percentage="percentage"/>
        </div>

@@ -10,7 +10,7 @@ const {isRisk} = defineProps(['isRisk']);
 <template>
     <article class="bg-white p-3 border rounded-3 d-flex flex-column flex-fill">
 
-            <div class="border-bottom d-flex align-items-center">
+            <div class="border-bottom d-flex flex-column flex-sm-row align-items-center">
                 <div class="flex-grow-1">
                     <span class="fs-6">Total</span>
                     <p class="mb-1 text-dark-grey fw-bold">€678 789</p>

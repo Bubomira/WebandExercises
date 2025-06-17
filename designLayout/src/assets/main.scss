@@ -57,5 +57,11 @@ $theme-colors: map-merge($theme-colors , $custom-colors );
  min-height: 210px;
 }
 
+@media screen and (width<300px){
+   html{
+      font-size: 10px
+   }
+}
+
 
 @import "bootstrap/scss/bootstrap";

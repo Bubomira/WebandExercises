@@ -18,8 +18,8 @@
 <template>
   <section class="d-flex gap-3 flex-column bg-grey-section pt-2 pb-3 px-3 border border-medium-grey rounded-4 flex-grow-1">   
     <div>
-        <div class="d-flex gap-2 align-items-center">
-            <div class="d-flex flex-column justify-content-between  min-table">
+        <div class="d-flex gap-2 flex-column flex-sm-row align-items-center">
+            <div class="d-flex flex-column align-items-sm-start align-items-center  justify-content-between  min-table">
                 <div class="mb-3">
                     <SectionInformationHeading :heading="heading"/>
                     <span class="fs-xs text-table-header" v-if="!isRisk">(All values in k€)</span>

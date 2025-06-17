@@ -11,7 +11,7 @@
         <div class="d-flex flex-column gap-3">
             <FlashNewsSection/>
             <SalesStatusSection/>
-            <div class="d-flex flex-wrap gap-3">
+            <div class="d-flex flex-wrap flex-xxl-nowrap gap-3">
                 <TableCard :is-risk="false"/>
                 <TableCard :is-risk="true"/>
             </div> 
